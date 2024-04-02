@@ -1,9 +1,15 @@
-import type { Component } from "solid-js";
+import { Component } from "solid-js";
+import { Contact, Footer, Navbar } from "../../components/index";
 
 const contact: Component = () => {
     return (
         <div>
-            <div>abotu</div>
+            <Navbar />
+            <div class="py-40">
+                {" "}
+                <Contact />
+            </div>
+            <Footer />
         </div>
     );
 };
