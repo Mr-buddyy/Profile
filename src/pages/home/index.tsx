@@ -1,7 +1,6 @@
 import { Component, createEffect, createSignal } from "solid-js";
 import { Navbar, Footer, Button, Timeline, Portofolio, Skill, Contact, About } from "../../components/index";
-import { climateaware, desa, event, gamis, stoik } from "../../assets/index";
-import fotoFormal from "../../assets/3x4.jpeg";
+import { climateaware, desa, event, gamis, stoik, foto } from "../../assets/index";
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbwDQN2AF1ZzQn0jek3sTjJSpuXqiKhDLc--s5wP0PJS6BgrgHmUuHffLvWEdsjTiRreAA/exec";
 
@@ -60,7 +59,7 @@ const home: Component = () => {
             {/* Hero */}
             <div class="hero min-h-screen bg-base-200 ">
                 <div class="hero-content flex-col lg:flex-row-reverse lg:p-40 items-center justify-center">
-                    <img src={fotoFormal} class="max-w-48 rounded-lg shadow-2xl" />
+                    <img src={foto} class="max-w-48 rounded-lg shadow-2xl" />
                     <div class="grid lg:grid-cols-2 grid-cols-1 w-full lg:text-start text-center">
                         <div class="">
                             {" "}

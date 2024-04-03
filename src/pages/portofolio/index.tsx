@@ -37,7 +37,7 @@ const Portfolio = () => {
                             "As Backend developer. Provisioning endpoints based on requirements while ensuring security, implementing business logic, handling errors, conducting backend testing, and managing databases. In the context of utilizing Laravel technology, MySQL is employed for database management. Also designing the logo"
                         }
                         skills={"Laravel, NextJs, JavaScript, Fullstack, Tailwind CSS, MySQL"}
-                        href={"https://github.com/Mr-buddyy/Portofolio"}
+                        href={"https://github.com/Mr-buddyy/Gamis"}
                     />
                     <Portofolio
                         img={desa}

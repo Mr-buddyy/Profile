@@ -2,7 +2,7 @@ import { createSignal, type Component, createEffect, onCleanup } from "solid-js"
 
 // import { A } from "@solidjs/router";
 const Navbar: Component = () => {
-    const [theme, setDarkTheme] = createSignal(false);
+    const [theme, setDarkTheme] = createSignal(getInitialTheme());
     const toggleTheme = () => {
         setDarkTheme((prevTheme) => !prevTheme);
     };
@@ -16,7 +16,13 @@ const Navbar: Component = () => {
                 htmlElement.removeAttribute("data-theme");
             });
         }
+        localStorage.setItem("theme", theme() ? "dark" : "light");
     });
+    function getInitialTheme() {
+        // Get theme from localStorage or default to light theme
+        const storedTheme = localStorage.getItem("theme");
+        return storedTheme === "dark";
+    }
 
     return (
         <>
@@ -45,7 +51,7 @@ const Navbar: Component = () => {
                             </li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">daisyUI</a>
+                    <a class="btn btn-ghost text-xl">Singgih Budi Hartono</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
@@ -65,7 +71,7 @@ const Navbar: Component = () => {
                 </div>
                 <div class="navbar-end">
                     <label class="cursor-pointer grid place-items-center">
-                        <input type="checkbox" value="synthwave" class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" onClick={toggleTheme} />
+                        <input type="checkbox" value="synthwave" class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" checked={theme()} onChange={toggleTheme} />
                         <svg
                             class="col-start-1 row-start-1 stroke-base-100 fill-base-100"
                             xmlns="http://www.w3.org/2000/svg"

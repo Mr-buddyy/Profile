@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.13.1",
+    "icons": "link:@awesome.me/kit-KIT_CODE/icons",
     "solid-app-router": "^0.4.2",
     "solid-js": "^1.8.11"
   }

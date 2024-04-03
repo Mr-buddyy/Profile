@@ -8,6 +8,9 @@ dependencies:
   '@solidjs/router':
     specifier: ^0.13.1
     version: 0.13.1(solid-js@1.8.11)
+  icons:
+    specifier: link:@awesome.me/kit-KIT_CODE/icons
+    version: link:@awesome.me/kit-KIT_CODE/icons
   solid-app-router:
     specifier: ^0.4.2
     version: 0.4.2(solid-js@1.8.11)

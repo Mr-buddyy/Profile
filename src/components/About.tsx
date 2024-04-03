@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { Timeline, Skill } from "./index";
-import ittp from "../assets/1110.jpg";
+import { logo } from "../assets/index";
 
 const about: Component = () => {
     return (
@@ -21,7 +21,7 @@ const about: Component = () => {
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-24">
                         <div>
-                            <img class="w-full max-w-xs mx-auto" src={ittp} alt="" />
+                            <img class="w-full max-w-xs mx-auto" src={logo} alt="" />
                         </div>
                         <div class="text-center lg:text-left">
                             <h2 class="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl">Institut Teknologi Telkom Purwokerto</h2>
@@ -49,9 +49,11 @@ const about: Component = () => {
                     <Skill children="JavaScript" />
                     <Skill children="Laravel" />
                     <Skill children="Github" />
-                    <Skill children="React" />
+                    <Skill children="ReactJS" />
                     <Skill children="Tailwind CSS" />
                     <Skill children="MySQL" />
+                    <Skill children="NextJS" />
+                    <Skill children="CSS" />
                 </div>
             </section>
             {/* end skill */}

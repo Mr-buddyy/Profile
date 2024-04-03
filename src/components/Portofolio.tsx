@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { climateaware, desa, event, gamis, stoik } from "../assets/index";
-import Button from "./Button";
+import Button from "./atoms/Button";
 
 interface PortofolioPros {
     // Sesuaikan tipe children dengan kebutuhan
