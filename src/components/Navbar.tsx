@@ -1,28 +1,10 @@
 import { createSignal, type Component, createEffect, onCleanup } from "solid-js";
+import hooks from "../hooks/hooks";
 
 // import { A } from "@solidjs/router";
 const Navbar: Component = () => {
-    const [theme, setDarkTheme] = createSignal(getInitialTheme());
-    const toggleTheme = () => {
-        setDarkTheme((prevTheme) => !prevTheme);
-    };
-    createEffect(() => {
-        const htmlElement = document.querySelector("html");
-        if (htmlElement) {
-            htmlElement.setAttribute("data-theme", theme() ? "dark" : "light"); // Convert boolean to string
-
-            // Cleanup function to remove the attribute when the component unmounts
-            onCleanup(() => {
-                htmlElement.removeAttribute("data-theme");
-            });
-        }
-        localStorage.setItem("theme", theme() ? "dark" : "light");
-    });
-    function getInitialTheme() {
-        // Get theme from localStorage or default to light theme
-        const storedTheme = localStorage.getItem("theme");
-        return storedTheme === "dark";
-    }
+    const { toggleThemes } = hooks();
+    const { theme, toggleTheme } = toggleThemes();
 
     return (
         <>

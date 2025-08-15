@@ -1,6 +1,6 @@
 import { Component, createEffect, createSignal } from "solid-js";
 import { Navbar, Footer, Button, Timeline, Portofolio, Skill, Contact, About } from "../../components/index";
-import { climateaware, desa, event, gamis, stoik, foto } from "../../assets/index";
+import { climateaware, desa, event, gamis, stoik, profile } from "../../assets/index";
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbwDQN2AF1ZzQn0jek3sTjJSpuXqiKhDLc--s5wP0PJS6BgrgHmUuHffLvWEdsjTiRreAA/exec";
 
@@ -57,7 +57,7 @@ const home: Component = () => {
         <div>
             <Navbar />
             {/* Hero */}
-            <div class="hero min-h-screen bg-base-200 ">
+            {/* <div class="hero min-h-screen bg-base-200 ">
                 <div class="hero-content flex-col lg:flex-row-reverse lg:p-40 items-center justify-center">
                     <img src={foto} class="max-w-48 rounded-lg shadow-2xl" />
                     <div class="grid lg:grid-cols-2 grid-cols-1 w-full lg:text-start text-center">
@@ -71,6 +71,16 @@ const home: Component = () => {
                             </h1>
                             <p class="py-6">Fresh Graduated Software Engineer From Institut Teknologi Telkom Purwokerto</p>
                         </div>
+                    </div>
+                </div>
+            </div> */}
+            <div class="hero bg-base-200 min-h-screen">
+                <img src={profile} class="w-full h-full absolute rounded-lg shadow-2xl -z-0 opacity-80" />
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Junior Software Engineer</h1>
+                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
