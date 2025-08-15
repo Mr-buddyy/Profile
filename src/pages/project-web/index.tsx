@@ -1,5 +1,5 @@
 import { createSignal, onMount } from "solid-js";
-import { GetGithub } from "../../services/services";
+import GetGithub from "../../services/services";
 import Navbar from "../../components/main/Navbar";
 
 export default function index() {
