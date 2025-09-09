@@ -7,7 +7,7 @@ export default function Navbar() {
 
     return (
         <div class="w-full bg-base-200" role="navigation">
-            <div class="navbar shadow-sm border-b-[0.1em] lg:w-1/2 justify-self-center">
+            <div class="navbar border-b-[0.1em] lg:w-1/2 justify-self-center">
                 <div class="w-full lg:justify-center">
                     <div class="navbar-start flex lg:hidden">
                         <div class="dropdown">

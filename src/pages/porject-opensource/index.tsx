@@ -42,7 +42,7 @@ export default function index() {
                                             </div>
                                         </div>
                                         <div>
-                                            <button class="btn bg-gray-300 w-32">View Repository</button>
+                                            <button class="btn w-32 dark:shadow-white">View Repository</button>
                                         </div>
                                     </div>
                                     <hr />

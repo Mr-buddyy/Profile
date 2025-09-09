@@ -5,11 +5,10 @@ import GetGithub from "../services/services";
 export default function hooks() {
     const Navbar = () => {
         const items = [
-            { label: "Profile", link: "/profile" },
-            { label: "Design", link: "#" },
-            { label: "UI Design", link: "/portofolio-design" },
+            { label: "Home", link: "/" },
+            { label: "Design", link: "/portofolio-design" },
             { label: "Web Development", link: "/portofolio-opensource" },
-            { label: "Repository", link: "/portofolio-opensource" },
+            { label: "Repository", link: "/repository" },
         ];
         createEffect(() => {
             onCleanup(() => {
@@ -31,9 +30,9 @@ export default function hooks() {
             },
 
             {
-                field: "UI Design",
-                title: "UI Design",
-                description: "A brief description of UI Design",
+                field: "Design",
+                title: "Design",
+                description: "A brief description of Design",
                 icon: "vscode-icons:file-type-xib",
                 border: "#e9ad0f",
                 link: "/portofolio-design",
@@ -93,25 +92,25 @@ export default function hooks() {
         const projectList = [
             {
                 item: "pyramid-mockup_fy8qjx",
-                title: "Pyramid Management System",
+                title: "PYRAMID MANAGEMENT SYSTEM",
                 caption: "Pyramid Market Management System",
                 tags: "UI Design | Website | Mobile",
             },
             {
                 item: "emergency-mockup_lalbep",
-                title: "Emergency App",
+                title: "EMERGENCY APP",
                 caption: "Emergency Response System",
                 tags: "UI Design | Mobile",
             },
             {
                 item: "mencare-mockup_rr4ryy",
-                title: "MenCare",
+                title: "MENCARE",
                 caption: "Men Care Application",
                 tags: "UI Design | Mobile",
             },
             {
                 item: "laundyskuy-mockup_vkez41",
-                title: "LaundrySky",
+                title: "LAUNDRYSKY  ",
                 caption: "Laundry Management System",
                 tags: "UI Design | Mobile",
             },
@@ -125,7 +124,7 @@ export default function hooks() {
             const githubData = await GetGithub("Mr-buddyy");
             setGithubData(githubData);
         };
-        onMount(() => {
+        createEffect(() => {
             fetchDataAttendance();
         });
         return { githubData, setGithubData, fetchDataAttendance };
