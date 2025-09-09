@@ -32,7 +32,7 @@ export default function index() {
                                 <div>
                                     <div class="flex flex-row gap-5 py-5 w-full justify-between">
                                         <div class="flex flex-row gap-5">
-                                            <img loading="lazy" class="size-10 rounded-box " src="https://img.daisyui.com/images/profile/demo/1@94.webp" alt="etc" />
+                                            {/* <img loading="lazy" class="size-10 rounded-box " src="https://img.daisyui.com/images/profile/demo/1@94.webp" alt="etc" /> */}
                                             <div class="flex flex-col">
                                                 <div>
                                                     <div>{item.name}</div>
